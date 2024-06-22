@@ -1,0 +1,13 @@
+./rtl/adv_timer_apb_if.sv  
+./rtl/input_stage.sv  
+./rtl/prescaler.sv	   
+./rtl/timer_cntrl.sv
+./rtl/lut_4x4.sv      
+./rtl/pulp_clock_gating.sv  
+./rtl/timer_module.sv
+./rtl/comparator.sv	     
+./rtl/out_filter.sv   
+./rtl/tc_clk_gating.sv	   
+./rtl/up_down_counter.sv
+./tb/tb.sv
+./rtl/apb_adv_timer.sv     
