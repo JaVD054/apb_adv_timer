@@ -1,5 +1,9 @@
 `timescale 1ns/1ns
 
+parameter APB_ADDR_WIDTH = 12;
+parameter EXTSIG_NUM     = 32;
+parameter TIMER_NBITS    = 16;
+
 module tb;
 
     // Inputs
