@@ -60,21 +60,26 @@ module tb;
         .ch_3_o(ch_3_o)
     );
 
-    // create dumpfile
-    initial begin
-        $dumpfile("tb.vcd");
-        $dumpvars(0, tb);
-    end
+    // // create dumpfile
+    // initial begin
+    //     $dumpfile("tb.vcd");
+    //     $dumpvars(0, tb);
+    // end
 
     initial begin
-        HRESETn = 1;
-        #100 HRESETn = 0;
-        #1000 PSEL = 1;
+        HRESETn = 0;
+        #100 HRESETn = 1;
+        #5 PSEL = 1;
         PENABLE = 1;
         PWRITE = 1;
+        PADDR = 8;
+        PWDATA = {16'b10001, 16'b0};
+        #100;
         PADDR = 0;
-        PWDATA = {{27{1'b1}}, 5'b10001};
-        #111;
+        PWDATA = {{27{1'b0}}, 5'b10001};
+        #10000;
+        
+        $stop;
 
 
     end
